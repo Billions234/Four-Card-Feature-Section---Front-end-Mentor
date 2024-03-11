@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BODY */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(242, 242, 242);
+}
+
+/* MAIN BODY */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 20px;
+}
+
+
+/* HEADER
+/Title/ Subtitle/ Description/ */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+}
+header div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header-title {
+    font-size: 30px;
+    color: rgb(163, 165, 174);
+}
+.header-subTitle {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(76, 78, 97);
+}
+.header-description {
+    font-size: 20px;
+    color: rgb(163, 165, 174);
+}
+
+
+/* CARD SECTIONS
+/ Container/ Title/ Description/ Image/ Border/ */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(203, 203, 203, 0.9);
+}
+.container div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container img {
+    width: 5rem;
+    margin-left: 75%;
+}
+
+.supervisor-border {
+    border-top: 10px solid rgb(69, 211, 211);
+}
+.team-border {
+    border-top: 10px solid rgb(234, 83, 83);
+}
+.karma-border {
+    border-top: 10px solid rgb(252, 175, 74);
+}
+.calculator-border {
+    border-top: 10px solid rgb(84, 158, 242);
+}
+.title {
+    font-size: 25px;
+    color: rgb(76, 78, 97);
+    font-weight: 700;
+}
+.description {
+    font-size: 20px;
+    color: rgb(163, 165, 174);
+}
+
+
+ @media screen and (min-width: 760px) {
+
+    /* MAIN BODY */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    /* HEADER */
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+    header div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-title {
+        font-size: 28px;
+        color: rgb(163, 165, 174);
+    }
+    .header-subTitle {
+        font-size: 28px;
+        font-weight: 600;
+        color: rgb(76, 78, 97);
+    }
+    .header-description {
+        font-size: 18px;
+        color: rgb(163, 165, 174);
+    }
+
+    /* CARD SECTIONS */
+    section {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "sup team cal"
+        "sup karma cal";
+        grid-gap: 20px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 20rem;
+        background-color: rgb(255, 255, 255);
+        padding: 30px 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(203, 203, 203, 0.9);
+    }
+    .container div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container img {
+        width: 3.5rem;
+        margin-left: 80%;
+    }
+
+    .supervisor-border {
+        border-top: 10px solid rgb(69, 211, 211);
+        grid-area: sup;
+        align-self: center;
+    }
+    .team-border {
+        border-top: 10px solid rgb(234, 83, 83);
+        grid-area: team;
+        justify-self: center;
+    }
+    .karma-border {
+        border-top: 10px solid rgb(252, 175, 74);
+        grid-area: karma;
+        justify-self: center;
+    }
+    .calculator-border {
+        border-top: 10px solid rgb(84, 158, 242);
+        grid-area: cal;
+        align-self: center;
+    }
+    .title {
+        font-size: 20px;
+        color: rgb(76, 78, 97);
+        font-weight: 700;
+    }
+    .description {
+        font-size: 15px;
+        color: rgb(163, 165, 174);
+    }
+}
